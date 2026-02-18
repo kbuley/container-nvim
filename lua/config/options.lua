@@ -33,3 +33,21 @@ vim.filetype.add({
     sls = "sls",
   },
 })
+
+-- clipboard tomfoolery
+vim.opt.clipboard = "unnamedplus"
+
+-- OSC 52 fallback for SSH/containers
+if os.getenv("SSH_TTY") or os.getenv("DISPLAY") == nil then
+  vim.g.clipboard = {
+    name = "OSC 52",
+    copy = {
+      ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+      ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+    },
+    paste = {
+      ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+      ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+    },
+  }
+end
