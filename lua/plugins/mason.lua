@@ -1,0 +1,25 @@
+return {
+  "mason-org/mason.nvim",
+  opts = function(_, opts)
+    -- formatters
+    table.insert(opts.ensure_installed, "bash-language-server")
+    table.insert(opts.ensure_installed, "buf")
+    table.insert(opts.ensure_installed, "codespell")
+    table.insert(opts.ensure_installed, "delve")
+    table.insert(opts.ensure_installed, "goimports-reviser")
+    table.insert(opts.ensure_installed, "golines")
+    table.insert(opts.ensure_installed, "gotests")
+    table.insert(opts.ensure_installed, "gotestsum")
+    table.insert(opts.ensure_installed, "jq")
+    table.insert(opts.ensure_installed, "markdown-toc")
+    table.insert(opts.ensure_installed, "markdownlint-cli2")
+    table.insert(opts.ensure_installed, "prettier")
+    table.insert(opts.ensure_installed, "protolint")
+    table.insert(opts.ensure_installed, "ruff")
+    table.insert(opts.ensure_installed, "shellcheck")
+    table.insert(opts.ensure_installed, "xmlformatter")
+    table.insert(opts.ensure_installed, "yamlfix")
+    table.insert(opts.ensure_installed, "yamllint")
+    table.insert(opts.ensure_installed, "yaml-language-server")
+  end,
+}
