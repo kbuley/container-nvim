@@ -10,6 +10,7 @@ return {
     table.insert(opts.ensure_installed, "golines")
     table.insert(opts.ensure_installed, "gotests")
     table.insert(opts.ensure_installed, "gotestsum")
+    table.insert(opts.ensure_installed, "jsonlint")
     table.insert(opts.ensure_installed, "jq")
     table.insert(opts.ensure_installed, "markdown-toc")
     table.insert(opts.ensure_installed, "markdownlint-cli2")
